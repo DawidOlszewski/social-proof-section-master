@@ -239,3 +239,13 @@ ul {
         margin-bottom: 0;
     }
 }
+
+@media (min-width: 1100px) {
+    .container {
+        padding: 10vh 10vw;
+    }
+
+    .opinion {
+        width: 25vw;
+    }
+}
