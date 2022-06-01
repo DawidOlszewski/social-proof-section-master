@@ -176,6 +176,7 @@ ul {
         margin-top: 0;
         align-items: flex-start;
         text-align: start;
+        justify-content: center;
     }
 
     header h1 {
@@ -201,11 +202,11 @@ ul {
     }
 
     .rating:nth-child(2) {
-        margin-left: 2.5rem;
+        margin-left: 7vw;
     }
 
     .rating:nth-child(3) {
-        margin-left: 5rem;
+        margin-left: 14vw;
     }
 
     .star-container img {
@@ -223,14 +224,14 @@ ul {
     }
 
     .opinion:nth-child(2) {
-        margin-top: 1.5rem;
+        margin-top: 6vh;
     }
     .opinion:nth-child(3) {
-        margin-top: 3rem;
+        margin-top: 12vh;
     }
 
     .opinion {
-        height: 18rem;
+        height: min-content;
         width: 29vw;
     }
 
