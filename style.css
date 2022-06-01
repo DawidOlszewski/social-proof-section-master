@@ -158,23 +158,29 @@ ul {
 @media (min-width: 800px) {
     body {
         height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         /* background-image: url(images/bg-pattern-top-mobile.svg),
             url(images/bg-pattern-bottom-mobile.svg); */
     }
 
     .container {
         grid-template-rows: 2fr 3fr;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 3fr;
         grid-template-areas: 'header ratings' 'opinions opinions';
     }
 
     header {
         grid-area: header;
         margin-top: 0;
+        align-items: flex-start;
+        text-align: start;
     }
 
     header h1 {
         font-size: 2.5rem;
+        margin-left: 0;
     }
 
     header p {
@@ -183,7 +189,31 @@ ul {
 
     .ratings {
         grid-area: ratings;
-        margin-bottom: 0;
+        margin: 0 0;
+        justify-content: center;
+    }
+
+    .rating {
+        flex-direction: row;
+        width: 82%;
+        height: 2.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .rating:nth-child(2) {
+        margin-left: 2.5rem;
+    }
+
+    .rating:nth-child(3) {
+        margin-left: 5rem;
+    }
+
+    .star-container img {
+        width: 80%;
+    }
+
+    .star-container li:not(:last-child) {
+        margin-right: 0.3rem;
     }
 
     .opinions {
