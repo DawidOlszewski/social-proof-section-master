@@ -17,8 +17,6 @@ body {
     width: 100vw;
     margin: 0;
 
-    background: url(images/bg-pattern-top-mobile.svg) left top no-repeat;
-
     background-image: url(images/bg-pattern-top-mobile.svg),
         url(images/bg-pattern-bottom-mobile.svg);
     background-position: left top, right bottom;
@@ -155,4 +153,58 @@ ul {
     margin-bottom: 0;
 
     line-height: 1.6rem;
+}
+
+@media (min-width: 800px) {
+    body {
+        height: 100vh;
+        /* background-image: url(images/bg-pattern-top-mobile.svg),
+            url(images/bg-pattern-bottom-mobile.svg); */
+    }
+
+    .container {
+        grid-template-rows: 2fr 3fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'header ratings' 'opinions opinions';
+    }
+
+    header {
+        grid-area: header;
+        margin-top: 0;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        margin-bottom: 0rem;
+    }
+
+    .ratings {
+        grid-area: ratings;
+        margin-bottom: 0;
+    }
+
+    .opinions {
+        grid-area: opinions;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .opinion:nth-child(2) {
+        margin-top: 1.5rem;
+    }
+    .opinion:nth-child(3) {
+        margin-top: 3rem;
+    }
+
+    .opinion {
+        height: 18rem;
+        width: 29vw;
+    }
+
+    .opinion:not(:last-child) {
+        margin-bottom: 0;
+    }
 }
