@@ -15,7 +15,6 @@
 
 body {
     width: 100vw;
-    height: 100vh;
     margin: 0;
 
     background: url(images/bg-pattern-top-mobile.svg) left top no-repeat;
@@ -42,7 +41,7 @@ header p {
 
 h1 {
     margin: 0 1rem;
-    max-width: 18rem;
+    max-width: 23rem;
     color: var(--very-dark-magenta);
 }
 
@@ -58,10 +57,14 @@ ul {
 
 .ratings {
     margin-bottom: 3rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
 .rating {
     width: 100%;
+    max-width: 23rem;
     height: 4rem;
     margin-bottom: 0.7rem;
     padding: 0.7rem;
@@ -96,11 +99,18 @@ ul {
     font-weight: bold;
 }
 
+.opinions {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
 .opinion {
     background-color: var(--very-dark-magenta);
     color: white;
     padding: 2.1rem 1.9rem;
     border-radius: 0.5rem;
+    max-width: 23rem;
 }
 
 .opinion:not(:last-child) {
