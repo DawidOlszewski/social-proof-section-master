@@ -1,10 +1,148 @@
-/* Very Dark Magenta: hsl(300, 43%, 22%)
-Soft Pink: hsl(333, 80%, 67%)
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --pink: hsl(333, 80%, 67%);
+    --dark-magenta: hsl(303, 10%, 53%);
+    --light-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
 
-Dark Grayish Magenta: hsl(303, 10%, 53%)
-Light Grayish Magenta: hsl(300, 24%, 96%)
-White: hsl(0, 0%, 100%)
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
 
-- Font size: 15px
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
 
-font-family: 'League Spartan', sans-serif; */
+    background: url(images/bg-pattern-top-mobile.svg) left top no-repeat;
+
+    background-image: url(images/bg-pattern-top-mobile.svg),
+        url(images/bg-pattern-bottom-mobile.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+}
+
+header {
+    margin-top: 3rem;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+header p {
+    color: var(--dark-magenta);
+    line-height: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    margin: 0 1rem;
+    max-width: 18rem;
+    color: var(--very-dark-magenta);
+}
+
+ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.container {
+    display: grid;
+    padding: 1rem 2rem;
+}
+
+.ratings {
+    margin-bottom: 3rem;
+}
+
+.rating {
+    width: 100%;
+    height: 4rem;
+    margin-bottom: 0.7rem;
+    padding: 0.7rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--light-magenta);
+    border-radius: 0.5rem;
+
+    font-size: 1rem;
+}
+
+.star-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.star-container img {
+    width: 110%;
+}
+
+.star-container li:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+.rating p {
+    margin: 0;
+    color: var(--very-dark-magenta);
+    font-weight: bold;
+}
+
+.opinion {
+    background-color: var(--very-dark-magenta);
+    color: white;
+    padding: 2.1rem 1.9rem;
+    border-radius: 0.5rem;
+}
+
+.opinion:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.opinion-verification {
+    color: var(--pink);
+}
+
+.opinion-profile {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: min-content 1fr;
+    grid-template-areas: 'avatar name' 'avatar verification';
+}
+
+.opinion-profile img {
+    grid-area: avatar;
+    border-radius: 50%;
+    width: 2.5rem;
+    align-self: center;
+}
+
+.opinion-verification {
+    grid-area: verification;
+    justify-self: start;
+    align-self: start;
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.opinion-owner {
+    grid-area: name;
+    justify-self: start;
+    align-self: end;
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.opinion-content {
+    margin-bottom: 0;
+
+    line-height: 1.6rem;
+}
