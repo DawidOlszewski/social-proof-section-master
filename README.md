@@ -8,7 +8,7 @@ As ususal I started from Frontend Mentor.
 
 I decided to learn something new, so this project is hosted by means of Netlify
 
-you can preview site here: [https://dawidolszewski.github.io/e-commerce-product-page/](https://dawid-olszewski-social-proof.netlify.app/)
+you can preview site here: https://dawid-olszewski-social-proof.netlify.app/
 
 I used here: 
 * media queries
